@@ -1,4 +1,4 @@
-# Getting started
+# Getting Started
 
 ## Prerequisities
 
@@ -15,7 +15,24 @@
 - Xcode
 - NASM assembler
 
-## Installation
+## Install script
+
+You can use the install script from the ```banjo-releases``` repository to automatically download and extract banjo
+to ```$HOME/.banjo/```.
+
+### Windows (Powershell)
+
+```powershell
+Invoke-WebRequest https://raw.githubusercontent.com/Chnoblouch/banjo-releases/main/getbanjo.py | Select-Object -Expand Content | python
+```
+
+### Linux and macOS
+
+```sh
+curl -s https://raw.githubusercontent.com/Chnoblouch/banjo-releases/main/getbanjo.py | python3
+```
+
+## Manual Installation
 
 1. Download the Banjo toolchain from [GitHub Releases](https://github.com/Chnoblouch/banjo-releases/releases/latest)
 2. Unzip the archive somewhere

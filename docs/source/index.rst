@@ -9,9 +9,9 @@ The Banjo Programming Language
    :hidden:
 
    getting_started
-   modules
-   data_types
    statements
+   data_types
+   modules
    magic_methods
    moving
    meta
