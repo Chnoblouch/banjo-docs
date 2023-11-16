@@ -25,6 +25,8 @@ jobs:
         run: sudo apt-get install python3-sphinx
       - name: Install MyST parser
         run: pip3 install myst-parser
+      - name: Install RTD theme
+        run: pip3 install sphinx_rtd_theme
       - name: Build HTML
         run: make html
         working-directory: ./docs
