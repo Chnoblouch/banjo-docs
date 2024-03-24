@@ -31,6 +31,9 @@ banjo build --config debug
 banjo build --config release
 ```
 
+The `release` config enables compiler optimizations. These are still unstable and might lead to
+incorrect code generation.
+
 ## Cross-compilation
 
 ```{note}
@@ -40,15 +43,15 @@ Cross-compilation requires you to have the LLD linker installed.
 The build system is capable of cross-compiling for targets (platforms) other than the host target:
 
 ```sh
-banjo build --target x86_64-linux
+banjo build --target x86_64-linux-gnu
 banjo build --target aarch64-macos
 ```
 
-These are the targets currently supported:  
-  - ```x86_64-windows```
-  - ```x86_64-linux```
+These targets currently support cross-compilation from other machines:  
+  - ```x86_64-windows-gnu```
+  - ```x86_64-linux-gnu```
   - ```x86_64-macos```
-  - ```aarch64-linux```
+  - ```aarch64-linux-gnu```
   - ```aarch64-macos```
 
 ### Notes
@@ -56,8 +59,9 @@ These are the targets currently supported:
 Cross-compilation has some limitations depending on the target operating system.
 
 **Windows** \
-Cross-compilation is currently not possible for Windows as this platform requires linking proprietary static
-libraries distributed by Microsoft.
+Cross-compilation is currently not possible for MSVC targets as this platform requires linking proprietary static
+libraries distributed by Microsoft. You can use the GNU targets instead (e.g. `x86_64-windows-gnu`). This automatically
+downloads the `llvm-mingw` toolchain for the libraries.
 
 **Linux** \
 When cross-compiling for Linux, precompiled versions of ```glibc``` and ```libgcc``` are downloaded to

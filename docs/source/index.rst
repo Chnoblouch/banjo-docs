@@ -9,6 +9,7 @@ The Banjo Programming Language
    :hidden:
 
    getting_started
+   basics
    statements
    data_types
    modules
@@ -23,14 +24,5 @@ The Banjo Programming Language
 
 
 Welcome to the docs for the Banjo language!
-This language is very much a work in progress, so expect things to crash.
-
-
-Example
-=======
-
-Hello World::
-
-   func main() {
-      println("Hello, World!");
-   }
+The language and toolchain are very much a work in progress, so expect things to crash.
+Examples can be found on the `online playground <https://marinohimself.ch/banjo/playground/>`_.

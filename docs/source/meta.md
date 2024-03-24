@@ -1,10 +1,10 @@
 # Metaprogramming
 
-Banjo provides access to compile-time features through the ``meta`` system.
-Meta expressions and statements can be evaluated at compile-time, generating runtime runtime.
-These constructs can only access compile-time values like ``const`` values or type information.
+Banjo provides access to compile-time features through the `meta` system.
+Meta expressions and statements are evaluated at compile-time, generating runtime code.
+These constructs can only access compile-time values like `const` values or type information.
 
-The size of a type can be accessed using ``meta.size(T)``.
+The size of a type can be accessed using `meta.size(T)`.
     
 ```banjo
 println(meta.size(i32));  # 4
@@ -60,9 +60,11 @@ meta if config.OS == config.ANDROID {
 
 ## meta for
 
-Repeated code can be generated at compile-time using ``meta for`` statements.
+Repeating code can be generated at compile-time using ``meta for`` statements.
 
 ```banjo
+use std.convert.str;
+
 struct Point {
     var x: i32;
     var y: i32;

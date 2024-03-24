@@ -21,8 +21,7 @@ This can be used to disable name mangling for interop with other languages.
     native func clear_color(r: f32, g: f32, b: f32, a: f32);
 
 
-dllimport/dllexport
-===================
+dllexport
+=========
 
-``dllimport`` is used on Windows to access symbols in native shared libraries (DLLs).
 ``dllexport`` exports the symbol when building a shared library. This makes the symbol visible to applications using the library.

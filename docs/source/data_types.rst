@@ -80,6 +80,61 @@ Structs
         }
     }
 
+Enums
+=====
+
+::
+
+    enum Fruit {
+        APPLE = 0,
+        BANANA = 1,
+        ORANGE = 2
+    }
+
+    func main() {
+        var fruit = Fruit.BANANA;
+        println(fruit);
+        println(fruit as u32);
+    }
+
+
+Unions
+======
+
+::
+
+    # Unions are types that can be one of multiple cases.
+    # Each union case has its own fields.
+
+    union Shape {
+        case Circle(radius: u32);
+        case Rectangle(width: u32, height: u32);
+    }
+
+    func main() {
+        # Union cases can be coerced to unions.
+        var shape: Shape = Shape.Rectangle(100, 50);
+        print_shape(&shape);
+    }
+
+    func print_shape(shape: *Shape) {
+        # Switch statements are used to both check and access the active case.
+        switch *shape {
+            case circle: Shape.Circle {
+                println("circle");
+                print("  radius: ");
+                println(circle.radius);
+            } case rectangle: Shape.Rectangle {
+                println("rectangle");
+                print("  width: " );
+                println(rectangle.width);
+                print("  height: " );
+                println(rectangle.height);
+            }
+        }
+    }
+
+
 Tuples
 ======
 
