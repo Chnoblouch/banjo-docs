@@ -23,13 +23,13 @@ to ```$HOME/.banjo/```.
 ### Windows (Powershell)
 
 ```powershell
-Invoke-WebRequest https://raw.githubusercontent.com/Chnoblouch/banjo-releases/main/getbanjo.py | Select-Object -Expand Content | python
+Invoke-WebRequest https://raw.githubusercontent.com/chnoblouch/banjo-releases/main/getbanjo.py | Select-Object -Expand Content | python
 ```
 
 ### Linux and macOS
 
 ```sh
-curl -s https://raw.githubusercontent.com/Chnoblouch/banjo-releases/main/getbanjo.py | python3
+curl -s https://raw.githubusercontent.com/chnoblouch/banjo-releases/main/getbanjo.py | python3
 ```
 
 ## Manual Installation
