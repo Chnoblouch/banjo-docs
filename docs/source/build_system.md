@@ -1,6 +1,6 @@
 # Build System
 
-## Creating a project
+## Creating a Project
 
 New projects can be created using the ``new`` command. This generates a new directory that contains
 the basic structure of a Banjo project:
@@ -9,7 +9,7 @@ the basic structure of a Banjo project:
 banjo new name
 ```
 
-## Building a project
+## Building a Project
 
 Projects can be built using the ``build`` command. This invokes the compiler and linker to generate
 the executable/library. The resulting binary can be found at ``output/<target>-<config>/<name>```:
@@ -34,10 +34,10 @@ banjo build --config release
 The `release` config enables compiler optimizations. These are still unstable and might lead to
 incorrect code generation.
 
-## Cross-compilation
+## Cross-Compilation
 
 ```{note}
-Cross-compilation requires you to have the LLD linker installed.
+Cross-compilation requires an installation of the LLD linker.
 ```
 
 The build system is capable of cross-compiling for targets (platforms) other than the host target:
@@ -61,7 +61,7 @@ Cross-compilation has some limitations depending on the target operating system.
 **Windows** \
 Cross-compilation is currently not possible for MSVC targets as this platform requires linking proprietary static
 libraries distributed by Microsoft. You can use the GNU targets instead (e.g. `x86_64-windows-gnu`). This automatically
-downloads the `llvm-mingw` toolchain for the libraries.
+downloads the `llvm-mingw` toolchain.
 
 **Linux** \
 When cross-compiling for Linux, precompiled versions of ```glibc``` and ```libgcc``` are downloaded to
@@ -69,7 +69,7 @@ the toolchains directory. Some shared objects are missing from these libraries, 
 
 **macOS** \
 When cross-compiling for macOS, a JSON file describing the macOS system APIs is downloaded. The build system
-then generate a sysroot containing [TAPI files](https://github.com/apple-oss-distributions/tapi) from this
+then generates a sysroot containing [TAPI files](https://github.com/apple-oss-distributions/tapi) from this
 JSON file that the linker uses to link macOS system libraries and frameworks. The sysroot generated is
 incomplete and some frameworks cannot be linked for this reason.
 
@@ -85,7 +85,7 @@ If this also fails, the toolchain has to be added manually by running the ```too
 the config parameters:
 
 ```sh
-banjo toolchain add x86_64-windows
+banjo toolchain add x86_64-windows-msvc
 banjo toolchain add aarch64-macos
 ```
 

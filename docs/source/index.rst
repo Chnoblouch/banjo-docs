@@ -15,6 +15,7 @@ The Banjo Programming Language
    modules
    magic_methods
    moving
+   closures
    meta
    attributes
    build_system

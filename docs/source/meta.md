@@ -9,7 +9,7 @@ The size of a type can be accessed using `meta.size(T)`.
 ```banjo
 println(meta.size(i32));  # 4
 println(meta.size(f64));  # 8
-println(meta.size([i8]));  # 16 on 64-bit targets
+println(meta.size(Array[i8]));  # 16 on 64-bit targets
 ```
 
 ## Type Reflection
@@ -92,7 +92,7 @@ func main() {
 The standard library features a built-in module that provides information about the current build.
 These are the constants stored by the compiler in this module:
 
-| Name         | Description             |                                |
+| Name         | Description             | Values                         |
 |--------------|-------------------------|--------------------------------|
 | BUILD_CONFIG | Build configuration     | DEBUG, RELEASE                 |
 | ARCH         | Target architecture     | X86_64, AARCH64                |

@@ -31,12 +31,12 @@ associated with the object. See :doc:`/moving` for info about moving objects. ::
         var ptr1 = SmartPtr.new(100);
 
         var a = 10;
-        if (a == 10) {
+        if a == 10 {
             var ptr2 = SmartPtr.new(20);
-            # Destructor of `ptr2` is called here.    
+            # Destructor of 'ptr2' is called here
         }
 
-        # Destructor of `ptr1` is called here.
+        # Destructor of 'ptr1' is called here
     }
 
 Operator Overloading
@@ -99,4 +99,8 @@ These are the operators that can currently be overloaded:
 | ``*``    | ``__mul__``  |
 +----------+--------------+
 | ``/``    | ``__div__``  |
++----------+--------------+
+| ``==``   | ``__eq__``   |
++----------+--------------+
+| ``!=``   | ``__ne__``   |
 +----------+--------------+

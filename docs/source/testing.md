@@ -22,10 +22,10 @@ Compiling...
 Linking...
 Running...
 
-tests:
+Tests:
   main.test ... OK
 
-passed: 1/1
+Passed: 1/1
 ```
 
 The ```std.test``` module provides assertions to check conditions in your tests.
@@ -57,11 +57,11 @@ Compiling...
 Linking...
 Running...
 
-tests:
+Tests:
   main.failing_test ... FAILED
 
-failures:
+Failures:
   main.failing_test: assertion failed: 5 != 10
 
-passed: 0/1
+Passed: 0/1
 ```

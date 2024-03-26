@@ -1,7 +1,7 @@
 Basics
 ======
 
-Functions are declared using the `func` keyword.
+Functions are defined using the `func` keyword.
 The following snippet declares the `main` function, which is the entry point to our programs:
 
 ```banjo
@@ -40,7 +40,7 @@ func main() {
 }
 ```
 
-Functions can have parameters and return a value:
+Functions can have parameters and a return value:
 
 ```banjo
 func add(a: i32, b: i32) -> i32 {
@@ -52,4 +52,3 @@ func main() {
     println(result);  # 15
 }
 ```
-

@@ -4,18 +4,18 @@
 
 ### Windows
 - Python 3 with pip
-- Visual Studio
+- Visual Studio Build Tools
 
 ### Linux
 - Python 3 with pip
-- LLVM toolchain (Clang/LLD/Libraries)
+- LLVM toolchain (Clang + LLD + glibc)
 
 ### macOS
 - Python 3 with pip
 - Xcode
-- NASM assembler
+- For x86_64: NASM assembler
 
-## Install script
+## Install Script
 
 You can use the install script from the ```banjo-releases``` repository to automatically download and extract banjo
 to ```$HOME/.banjo/```.
@@ -38,7 +38,7 @@ curl -s https://raw.githubusercontent.com/chnoblouch/banjo-releases/main/getbanj
 2. Unzip the archive somewhere
 3. Add ```banjo-{arch}-{os}/bin``` to your ```PATH``` variable
 
-## Create a project
+## Creating a Project
 
 Enter the directory where you want your project to be created and run ```banjo new hello-world```.
 This will create a project directory called ```hello-world```. Enter this directory and run ```banjo run```.
@@ -46,7 +46,13 @@ This will create a project directory called ```hello-world```. Enter this direct
 The output should look something like this:
 
 ```
-<Toolchain setup>
+Setting up toolchain for: x86_64-windows-msvc
+Locating MSVC toolchain...
+  Found vswhere: C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe
+  Found Visual Studio installation: C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools
+  Using MSVC version 14.38.33130
+  Found Windows SDK: C:\Program Files (x86)\Windows Kits\10\
+  Using Windows SDK version 10.0.22621.0
 Compiling...
 Linking...
 Build finished! (0.67 seconds)
